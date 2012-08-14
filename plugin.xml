@@ -1,8 +1,8 @@
-<plugin name='twilio-client' version='0.0.1' grailsVersion='2.0 &gt; *'>
+<plugin name='twilio-client' version='0.0.2' grailsVersion='2.0 &gt; *'>
   <author>Bob Florian</author>
   <authorEmail>bob.florian@reachlocal.com</authorEmail>
   <title>Twilio Client Plugin</title>
-  <description>Adds lighweight Twilio REST service and support for TwiML responses.
+  <description>Adds lighweight Twilio REST service and support for TwiML responses via Groovy MarkupBuilder.
 </description>
   <documentation>http://grails.org/plugin/twilio-client</documentation>
   <type>TwilioClientGrailsPlugin</type>
