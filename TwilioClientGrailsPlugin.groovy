@@ -93,14 +93,7 @@ Adds lighweight Twilio REST service and support for TwiML responses via Groovy M
 	private static addDynamicMethods(application)
 	{
 		application.controllerClasses.toList()*.metaClass*.renderTwiML = {block ->
-
-			def writer = new StringWriter()
-			def xml = new MarkupBuilder(writer)
-			xml.Response(block)
-
-			def resp = writer.toString()
-			delegate.render(text: resp, contentType: "text/xml", encoding: "UTF-8")
-
+			delegate.render(contentType: "text/xml", encoding: "UTF-8", block)
 			delegate.log.info("action=${delegate.params?.action}, params=${delegate.params}, response=\n${resp}")
 		}
 	}
