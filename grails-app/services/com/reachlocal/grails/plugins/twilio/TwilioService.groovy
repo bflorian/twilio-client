@@ -43,6 +43,12 @@ class TwilioService implements InitializingBean
 		authToken = config?.authToken ?: System.getProperty("twilio.token")
 	}
 
+	/**
+	 * Make a GET request to the Twilio REST API
+	 * @param path Method path, i.e. 'Recordings'
+	 * @param params Map of input parameter values
+	 * @return Parsed JSON objects
+	 */
 	def get(String path, Map params=[:])
 	{
 		def result = null
@@ -54,6 +60,12 @@ class TwilioService implements InitializingBean
 		return result
 	}
 
+	/**
+	 * Make a POST request to the Twilio REST API
+	 * @param path Method path, i.e. 'SMS/Messages'
+	 * @param params Map of input parameter values
+	 * @return Parsed JSON objects
+	 */
 	def post(String path, Map params=[:])
 	{
 		def result = null
